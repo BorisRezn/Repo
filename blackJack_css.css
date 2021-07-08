@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+	<body>
+		<style type="text/css">
+
+		body{
+
+		}
+
+		h3 {
+			font-family: Verdana;
+			color: #0095B6;
+			text-align: center;
+		}	
+
+		h4 {
+    		display: block;
+   			margin-block-start: 1.33em;
+    		margin-block-end: 1.33em;
+ 			margin-inline-start: 0px;
+  			margin-inline-end: 0px;
+			font-weight: bold;
+			font-family: Verdana;
+			color: #008B8B;
+		}
+
+		p {
+			font-family: Verdana;
+		}
+
+		span {
+			font-family: Verdana;
+		}
+
+		#header {
+			padding: 3em;
+			margin: 0em;
+		}
+
+		#gamer {
+			background-color: #F5F5DC;
+    		height:280px;
+   			width:25%;
+    		float:left;
+       		text-align: center;
+       	}
+
+       	#gamerPack {
+       		font-weight: bold;
+       	}
+
+       	#dealPack {
+       		font-weight: bold;
+       	}
+   		
+		#dealer {
+			background-color:#FDF5E6;
+			height:280px;
+			width:25%;
+    		float:left;
+    		text-align: center;
+		}
+
+		#space1 {
+			background-color:#FDF5E6;
+			height:280px;
+			width:25%;
+    		float:left;
+    		text-align: center;
+		}
+
+		#space2 {
+			background-color:#F5F5DC;
+			height:280px;
+			width:25%;
+    		float:left;
+    		text-align: center;
+		}
+
+		#footer {
+			font-family: Arial Black;
+			text-align: center;
+			background-color:#FFEFD5;	
+			height: 50px;
+			padding: 5px;
+			color: #F08080;	
+			font-weight: bold;
+	
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.hiddenrules {
+				display: none;
+				
+
+			}
+
+
+	</body>
+
+</html>
+
