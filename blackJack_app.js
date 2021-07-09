@@ -133,6 +133,7 @@ function funcGame() {
 	if (GamerSumm > 21) {
 		document.getElementById('gameMessage').innerHTML = "перебор, банк выиграл"
 		this.removeEventListener('click', funcGame);
+		reload.classList.remove('hidden');
 		}
 		else if (GamerSumm == 21) {
 		document.getElementById('gameMessage').innerHTML = "21, банк пробует сравнять"
@@ -198,15 +199,19 @@ function funcDeny() {
 
 		if (DealerSumm > 21) {
 		document.getElementById('gameMessage').innerHTML = "у банка перебор, вы выиграли"
+		reload.classList.remove('hidden');
 		}
 		else if (DealerSumm > GamerSumm) {
-		document.getElementById('gameMessage').innerHTML = "банк выиграл"	
+		document.getElementById('gameMessage').innerHTML = "банк выиграл"
+		reload.classList.remove('hidden');	
 		}
 		else if (DealerSumm == GamerSumm) {
-		document.getElementById('gameMessage').innerHTML = "РОВНО"		
+		document.getElementById('gameMessage').innerHTML = "РОВНО"
+		reload.classList.remove('hidden');		
 		}
 		else 
-		document.getElementById('gameMessage').innerHTML = "Вы выиграли"		
+		document.getElementById('gameMessage').innerHTML = "Вы выиграли"
+		reload.classList.remove('hidden');		
 	}
 
 }
@@ -251,9 +256,5 @@ function SumCards(arr) {
 	}
 
 
-function getPic() {
 
-
-
-}
 
