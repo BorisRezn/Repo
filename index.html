@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="blackJack_css.css"/>
+	<title>blackJACK</title>
+</head>
+
+<body style="background-color: #F0F8FF">
+	<h3 >
+		BlackJack 2021
+	</h3>
+
+	<div id='StartImage' align="center">
+		<img src="img/IMG-1.jpg" width="320" height="220" alt="колода карт">
+	</div>
+
+		<div id="header" align="center">
+			<input id="buttonStart" type="submit" value='Начать игру'></input> 
+			<input id="rulesButton" type="submit" value='Уточнить правила' ></input>
+		</div>
+
+			<h6 id='hiddenrules' class="hiddenrules" align="center" font-size='10'>
+				<p>	Цель игры - обыграть банк.<br>
+					Дилер раздает две карты игроку, одну карту себе.<br>
+					Значения очков каждой карты: от двойки до десятки — от 2 до 10 соответственно,<br> у туза — 1 или 11 (считаем как выгоднее игроку),<br>
+					король, дама, валет — 10.<br>
+					Сумма выше 21 - перебор.<br>
+					Дилер берет карты после игроков пока у него меньше 17 очков.<br>
+					После этого подсчитывается результат игры.
+				</p>
+			</h6>
+
+	
+			<div id='hidden' class="hidden">
+
+				<div id="space1" > 
+				</div>	
+				
+				<div id="gamer">
+					<h4 >Ваши карты</h4>	
+					<img id='cardPicGamer1' src="img/img_back.jpg" width="60" height="85" alt="1-я карта">
+					<img id='cardPicGamer2' src="img/img_back.jpg" width="60" height="85">
+					<img id='cardPicGamer3' width="60" height="85">
+					<img id='cardPicGamer4' width="60" height="85">
+
+					<p id="gamerPack"></p>
+					<span>Набрано очков:</span> <span id="gamerScore"></span>
+					<p ></p>
+				</div>
+			
+				<div id="dealer">
+					<h4>Карты банка</h4> 
+					<img id='cardPicDealer1' src="img/img_back.jpg" width="60" height="85" alt="1-я карта дилера">
+					<img id='cardPicDealer2' width="60" height="85" >
+					<img id='cardPicDealer3' width="60" height="85">
+					<img id='cardPicDealer4' width="60" height="85">
+
+					<p id="dealPack"></p>
+					<span>Набрано очков:</span>
+					<span id="dealScore"></span>
+				</div>
+		
+
+				<div id="space2"> 
+				</div>
+
+				<div id="footer">						
+				<button id='startCard' class="hidden">Раздать</button>
+				<button id='moreCard' class="hidden">Ещё карту?</button>
+				<button id='deny' class="hidden">Играет банк</button>
+				<p id='gameMessage'></p>
+				</div>
+
+		
+	</body>
+
+	<script src="blackJack_app.js"></script>
+
+</html>
