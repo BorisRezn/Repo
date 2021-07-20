@@ -1,28 +1,4 @@
-let buttonStart = document.querySelector('#buttonStart');
-let header = document.querySelector('#header');
-let StartImage = document.querySelector('#StartImage');
-let hidden = document.querySelector('#hidden');
 
-let hiddenrules = document.querySelector('#hiddenrules');
-
-let dealScore =document.querySelector('#dealScore');
-let gamerScore = document.querySelector('#gamerScore');
-let dealPack =document.querySelector('#dealPack');
-let gamerPack = document.querySelector('#gamerPack');
-
-let startCard= document.querySelector('#startCard');
-let moreCard= document.querySelector('#moreCard');
-let gameMessage = document.querySelector('#gameMessage');
-let deny = document.querySelector('#deny');
-
-let cardPicGamer1 = document.querySelector('#cardPicGamer1');
-let cardPicGamer2 = document.querySelector('#cardPicGamer2');
-let cardPicGamer3 = document.querySelector('#cardPicGamer3');
-let cardPicGamer4 = document.querySelector('#cardPicGamer4');
-let cardPicDealer1 = document.querySelector('#cardPicDealer1');
-let cardPicDealer2 = document.querySelector('#cardPicDealer2');
-let cardPicDealer3 = document.querySelector('#cardPicDealer3');
-let cardPicDealer4 = document.querySelector('#cardPicDealer4');
 
 //показ правил по запросу
 
@@ -31,11 +7,14 @@ var flag =1;
 rulesButton.addEventListener('click', function() {
 	if (flag==1) {
 	hiddenrules.classList.remove('hiddenrules');
+	StartImage.classList.add('hidden');
 	document.getElementById('rulesButton').value = 'Убрать правила';
+
 	flag = 0;
 	}
 	else if (flag==0) {
 	hiddenrules.classList.add('hiddenrules');
+	StartImage.classList.remove('hidden');
 	document.getElementById('rulesButton').value = 'Уточнить правила';
 	flag = 1;	
 	}
@@ -49,7 +28,8 @@ buttonStart.addEventListener('click', function() {
 		StartImage.classList.add('hidden');
 		hidden.classList.remove('hidden');
 		startCard.classList.remove('hidden');
-		hiddenrules.classList.add('hiddenrules');
+		hiddenrules.classList.add('hidden');
+		bigTitle.classList.add('hidden');
 
 	});
 
@@ -94,7 +74,7 @@ function funcStart() {
 
 	GamerSumm = SumCards(GamerArray);
 	if (GamerSumm == 21) {
-		document.getElementById('gameMessage').innerHTML = "21, банк пробует сравнять"
+		document.getElementById('gameMessage').innerHTML = "21, Банк пробует сравнять"
 		moreCard.removeEventListener('click', funcGame);
 		}
 }
@@ -131,14 +111,16 @@ function funcGame() {
 // переходы по набранным очкам
 
 	if (GamerSumm > 21) {
-		document.getElementById('gameMessage').innerHTML = "перебор, банк выиграл"
+		document.getElementById('gameMessage').innerHTML = "Перебор, банк выиграл"
 		this.removeEventListener('click', funcGame);
+		deny.classList.add('hidden');
+		moreCard.classList.add('hidden');
 		reload.classList.remove('hidden');
 		}
 		else if (GamerSumm == 21) {
 		document.getElementById('gameMessage').innerHTML = "21, банк пробует сравнять"
 		this.removeEventListener('click', funcGame);
-		
+		moreCard.classList.add('hidden');
 	}
 }
 
@@ -155,7 +137,7 @@ function funcDeny() {
 // переходы по набранным очкам
 
 	if (GamerSumm > 21) {
-		document.getElementById('gameMessage').innerHTML = "банк выиграл"
+		document.getElementById('gameMessage').innerHTML = "Банк выиграл"
 	}
 	else
 		document.getElementById('gameMessage').innerHTML = "ИГРАЕТ Банк"
@@ -200,18 +182,26 @@ function funcDeny() {
 		if (DealerSumm > 21) {
 		document.getElementById('gameMessage').innerHTML = "у банка перебор, вы выиграли"
 		reload.classList.remove('hidden');
+		deny.classList.add('hidden');
+		moreCard.classList.add('hidden');
 		}
 		else if (DealerSumm > GamerSumm) {
-		document.getElementById('gameMessage').innerHTML = "банк выиграл"
+		document.getElementById('gameMessage').innerHTML = "Банк выиграл"
 		reload.classList.remove('hidden');	
+		deny.classList.add('hidden');
+		moreCard.classList.add('hidden');
 		}
 		else if (DealerSumm == GamerSumm) {
 		document.getElementById('gameMessage').innerHTML = "РОВНО"
-		reload.classList.remove('hidden');		
+		reload.classList.remove('hidden');	
+		deny.classList.add('hidden');
+		moreCard.classList.add('hidden');	
 		}
 		else 
 		document.getElementById('gameMessage').innerHTML = "Вы выиграли"
 		reload.classList.remove('hidden');		
+		deny.classList.add('hidden');
+		moreCard.classList.add('hidden');
 	}
 
 }

@@ -4,60 +4,73 @@
 	<body>
 		<style type="text/css">
 
-		body{
-
-		}
+		body {
+			background-color: #F0F8FF;
+			}
 
 		h3 {
 			font-family: Verdana;
 			color: #0095B6;
 			text-align: center;
+			font-weight: bold;
 		}	
 
-		h4 {
+		h5 {
     		display: block;
-   			margin-block-start: 1.33em;
-    		margin-block-end: 1.33em;
- 			margin-inline-start: 0px;
-  			margin-inline-end: 0px;
+   			margin-block-start: 1em;
+    		margin-block-end: 1em;
 			font-weight: bold;
+			font-size: 120%; 
 			font-family: Verdana;
 			color: #008B8B;
 		}
 
-		p {
-			font-family: Verdana;
+		h6 {
+			font-family: Arial;
+			font-size: 0,5;
+			padding: 1em;
+			text-align: center;
 		}
 
 		span {
 			font-family: Verdana;
 		}
 
+		h2 {
+			font-family: Verdana;
+			text-align: center;
+			font-weight: bold;
+			font-size: 2em;
+			color: #CD5C5C;
+			padding-top: 1em;
+		}
+
 		#header {
-			padding: 3em;
+			padding: 2em;
 			margin: 0em;
+			text-align: center;
 		}
 
 		#gamer {
 			background-color: #F5F5DC;
     		height:280px;
-   			width:25%;
+   			width:30%;
     		float:left;
        		text-align: center;
-       	}
+        	}
 
        	#gamerPack {
-       		font-weight: bold;
+        	padding-top: 3em;
        	}
 
        	#dealPack {
-       		font-weight: bold;
+             padding-top: 3em;
        	}
    		
 		#dealer {
 			background-color:#FDF5E6;
 			height:280px;
-			width:25%;
+			width:30%;
     		float:left;
     		text-align: center;
 		}
@@ -65,28 +78,32 @@
 		#space1 {
 			background-color:#FDF5E6;
 			height:280px;
-			width:25%;
+			width:20%;
     		float:left;
     		text-align: center;
+    		font-weight: bold;
+    		font-size: 120%;
+    		color: #008B8B;
 		}
 
 		#space2 {
 			background-color:#F5F5DC;
 			height:280px;
-			width:25%;
+			width:20%;
     		float:left;
     		text-align: center;
+    		font-weight: bold;
+    		font-size: 120%;
+    		color: #4682B4;
 		}
 
 		#footer {
 			font-family: Arial Black;
 			text-align: center;
-			background-color:#FFEFD5;	
 			height: 50px;
-			padding: 5px;
+			padding-top: 2em;
 			color: #F08080;	
 			font-weight: bold;
-	
 			}
 
 			.hidden {
@@ -95,8 +112,6 @@
 
 			.hiddenrules {
 				display: none;
-				
-
 			}
 
 
